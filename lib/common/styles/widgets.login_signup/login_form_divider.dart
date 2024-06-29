@@ -18,19 +18,22 @@ class TFormDivider extends StatelessWidget {
       children: [
         Flexible(
           child: Divider(
-            color: dark ? TColors.darkGrey : TColors.grey,
+            color: dark ? TColors.softGrey : TColors.darkGrey,
             thickness: 0.5,
             indent: 60,
             endIndent: 5,
           ),
         ),
-        Text(
-          dividerText,
-          style: Theme.of(context).textTheme.labelMedium,
-        ),
+        Text(dividerText,
+            style: TextStyle(
+                color: dark
+                    ? TColors.softGrey
+                    : TColors
+                        .darkGrey) //Theme.of(context).textTheme.labelMedium,
+            ),
         Flexible(
           child: Divider(
-            color: dark ? TColors.darkGrey : TColors.grey,
+            color: dark ? TColors.softGrey : TColors.darkGrey,
             thickness: 0.5,
             indent: 5,
             endIndent: 60,
