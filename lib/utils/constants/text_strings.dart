@@ -37,27 +37,21 @@ class TTexts {
   static const String verificationCode = "Verification Code";
   static const String resendEmail = "Resend email";
   static const String resendEmailIn = "Resend email in";
+  static const String done = "Done";
 
   // -- Authentication Headings Text
   static const String loginTitle = "Welcome back,";
-  static const String loginSubTitle =
-      "Discover Limitless Choice and Unmatched Convenience.";
+  static const String loginSubTitle = "Discover Limitless Choice and Unmatched Convenience.";
   static const String signUpTitle = "Let's create your account";
   static const String forgetPasswordTitle = "Forget password";
-  static const String forgetPasswordSubTitle =
-      "Don't worry sometimes people can forget too, enter your email and we send you a password reset link.";
+  static const String forgetPasswordSubTitle = "Don't worry sometimes people can forget too, enter your email and we send you a password reset link.";
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
-  static const String changeYourPasswordSubTitle =
-      "Your account security is our priority's we've sent you a secure link to safety change your password and keep your account protected.";
+  static const String changeYourPasswordSubTitle = "Your account security is our priority's we've sent you a secure link to safety change your password and keep your account protected.";
   static const String confirmEmailTitle = "Verify your email address!";
-  static const String confirmEmailSubTitle =
-      "Congratulations! your account awaits: Verify your email to start shopping and experience a world of unrivaled deals and personalized offers.";
-  static const String emailNotReceivedMessage =
-      "Didn't get the email? Check your junk/spam or resend it.";
-  static const String yourEmailCreatedTitle =
-      "Your account successfully created!";
-  static const String yourEmailCreatedSubTitle =
-      "Welcome to our ultimate shopping destination: Your account is created. Unleash the joy of seamless online shopping!";
+  static const String confirmEmailSubTitle = "Congratulations! your account awaits: Verify your email to start shopping and experience a world of unrivaled deals and personalized offers.";
+  static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
+  static const String yourEmailCreatedTitle = "Your account successfully created!";
+  static const String yourEmailCreatedSubTitle = "Welcome to our ultimate shopping destination: Your account is created. Unleash the joy of seamless online shopping!";
 
   //Home
   static const String homeAppbarTitle = "Good day for shopping";

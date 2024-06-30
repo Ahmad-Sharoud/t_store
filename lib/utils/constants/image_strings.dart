@@ -14,5 +14,10 @@ static const String onBoardingImage2 = "assets/images/on_boarding_images/sammy-l
 static const String onBoardingImage3 = "assets/images/on_boarding_images/sammy-line-delivering.gif";
 
 
+ // Animation Images
+
+static const String deliveredEmailIllustration = "assets/images/animations/sammy-line-receives-a-mail.png";
+static const String staticSuccessIllustration = "assets/images/animations/static-success-illustrations.png";
+
 
 }
