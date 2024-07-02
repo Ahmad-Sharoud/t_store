@@ -33,5 +33,7 @@ static const String jeweleryIcon = "assets/icons/categories/icons8-sparkling-dia
 static const String electronicsIcon = "assets/icons/categories/icons8-smartphone-50.png";
 
 // Banner Images
-  static const String banner1 = "assets/images/banner/nike_supreme_progressive.png";
+  static const String banner1 = "assets/images/banner/promo_banner1.png";
+  static const String banner2 = "assets/images/banner/promo_banner2.png";
+  static const String banner3 = "assets/images/banner/promo_banner3.png";
 }
