@@ -25,7 +25,8 @@ class TVerticalImageText extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.only(right: TSizes.spaceBtwItems),
-        child: Column(children: [
+        child: Column(
+            children: [
           /// Circular Icon
           Container(
             width: 56,
@@ -37,10 +38,10 @@ class TVerticalImageText extends StatelessWidget {
             ),
             child: Center(
                 child: Image(
-                  image: AssetImage(image),
-                  fit: BoxFit.cover,
-                  color: dark ? TColors.light : TColors.dark,
-                )),
+              image: AssetImage(image),
+              fit: BoxFit.cover,
+              color: dark ? TColors.light : TColors.dark,
+            )),
           ),
 
           /// Text
@@ -51,7 +52,7 @@ class TVerticalImageText extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .labelMedium!
-                      .apply(color: textColor),
+                      .apply(color: textColor), textAlign: TextAlign.center,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis)),
         ]),

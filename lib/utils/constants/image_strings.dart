@@ -9,17 +9,17 @@ class TImages {
 
   //Onboarding Images
   static const String onBoardingImage1 =
-      "assets/images/on_boarding_images/sammy-line-searching.gif";
+      "assets/images/on_boarding/sammy-line-searching.gif";
   static const String onBoardingImage2 =
-      "assets/images/on_boarding_images/sammy-line-shopping.gif";
+      "assets/images/on_boarding/sammy-line-shopping.gif";
   static const String onBoardingImage3 =
-      "assets/images/on_boarding_images/sammy-line-delivering.gif";
+      "assets/images/on_boarding/sammy-line-delivering.gif";
 
   // Animation Images
   static const String deliveredEmailIllustration =
-      "assets/images/animations/sammy-line-receives-a-mail.png";
+      "assets/images/animation/sammy-line-receives-a-mail.png";
   static const String staticSuccessIllustration =
-      "assets/images/animations/static-success-illustrations.png";
+      "assets/images/animation/static-success-illustrations.png";
 
   // Category Icons
 static const String sportIcon = "assets/icons/categories/icons8-bowling-64.png";
@@ -31,4 +31,7 @@ static const String toyIcon = "assets/icons/categories/icons8-wooden-toy-car-64.
 static const String furnitureIcon = "assets/icons/categories/icons8-dining-chair-64.png";
 static const String jeweleryIcon = "assets/icons/categories/icons8-sparkling-diamond-50.png";
 static const String electronicsIcon = "assets/icons/categories/icons8-smartphone-50.png";
+
+// Banner Images
+  static const String banner1 = "assets/images/banner/nike_supreme_progressive.png";
 }
