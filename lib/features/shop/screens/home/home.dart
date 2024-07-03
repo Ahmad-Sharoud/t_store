@@ -1,9 +1,8 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:t_store/common/styles/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:t_store/common/styles/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:t_store/common/styles/widgets/custom_shapes/containers/search_container.dart';
-import 'package:t_store/common/styles/widgets/images/t_rounded_image.dart';
+import 'package:t_store/common/styles/widgets/layouts/grid_layout.dart';
+import 'package:t_store/common/styles/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:t_store/common/styles/widgets/texts/section_heading.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
@@ -18,12 +17,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// Header -- Tutorial [Section # 3, Video # 2]
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// AppBar
@@ -58,9 +57,26 @@ class HomeScreen extends StatelessWidget {
 
             /// Body
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(),
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  /// Promo Slider
+                  const TPromoSlider(
+                    banners: [
+                      TImages.banner1,
+                      TImages.banner2,
+                      TImages.banner3
+                    ],
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwSections),
 
+                  TGridLayout(
+                      itemCount: 4,
+                      itemBuilder: (_, index) => const TProductCardVertical()),
+
+                  /// Popular Products
+                ],
+              ),
             ),
           ],
         ),
