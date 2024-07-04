@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:t_store/common/styles/widgets/icons/t_rounded_icon.dart';
+import 'package:t_store/common/styles/widgets/icons/t_circular_icon.dart';
 import 'package:t_store/common/styles/widgets/images/t_rounded_image.dart';
 import 'package:t_store/common/styles/widgets/shadows.dart';
 import 'package:t_store/common/styles/widgets/texts/product_price_text.dart';
@@ -36,11 +36,8 @@ class TProductCardVertical extends StatelessWidget {
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
-                  TRoundedImage(
+                  const TRoundedImage(
                     imageUrl: TImages.nikeShoes,
-                    applyImageRadius: true,
-                    fit: BoxFit.cover,
-                    backgroundColor: dark ? TColors.dark : TColors.light,
                   ),
 
                   /// Sale Tage
@@ -65,7 +62,7 @@ class TProductCardVertical extends StatelessWidget {
                   const Positioned(
                     top: 0,
                     right: 0,
-                    child: TRoundedIcon(icon: Iconsax.heart5, color: Colors.red),
+                    child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
                   ),
                 ],
               ),
@@ -78,6 +75,7 @@ class TProductCardVertical extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TProductTitleText(
                     title: 'Nike Air Shoes',
@@ -110,7 +108,10 @@ class TProductCardVertical extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 /// Price
-                const TProductPriceText(price: '35.70',),
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child:  TProductPriceText(price: '35.70',),
+                ),
 
                 /// Add to Cart Icon
                 Container(

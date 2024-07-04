@@ -1,20 +1,20 @@
-
 import 'package:flutter/material.dart';
+import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
 class TRoundedImage extends StatelessWidget {
   const TRoundedImage({
     super.key,
+    this.border,
+    this.padding,
+    this.onPressed,
     this.width,
     this.height,
-    required this.imageUrl,
     this.applyImageRadius = true,
-    this.border,
+    required this.imageUrl,
+    this.fit = BoxFit.contain,
     this.backgroundColor,
-    this.fit,
-    this.padding,
     this.isNetworkImage = false,
-    this.onPressed,
     this.borderRadius = TSizes.md,
   });
 
@@ -26,8 +26,8 @@ class TRoundedImage extends StatelessWidget {
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;
-  final double borderRadius;
   final VoidCallback? onPressed;
+  final double borderRadius;
 
   @override
   Widget build(BuildContext context) {
@@ -39,15 +39,20 @@ class TRoundedImage extends StatelessWidget {
         padding: padding,
         decoration: BoxDecoration(
             border: border,
-            color:backgroundColor,
+            color: backgroundColor,
             borderRadius: BorderRadius.circular(borderRadius)),
         child: ClipRRect(
-            borderRadius: applyImageRadius
-                ? BorderRadius.circular(borderRadius)
-                : BorderRadius.zero,
-            child: Image(
-              fit: fit, image: isNetworkImage ? NetworkImage(imageUrl) : AssetImage(imageUrl) as ImageProvider,
-            )),
+          borderRadius: applyImageRadius
+              ? BorderRadius.circular(borderRadius)
+              : BorderRadius.zero,
+          child: Image(
+            fit: fit,
+            //color: TColors.dark,
+            image: isNetworkImage
+                ? NetworkImage(imageUrl)
+                : AssetImage(imageUrl) as ImageProvider,
+          ),
+        ),
       ),
     );
   }

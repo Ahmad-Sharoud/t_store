@@ -3,8 +3,8 @@ import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-class TRoundedIcon extends StatelessWidget {
-  const TRoundedIcon({
+class TCircularIcon extends StatelessWidget {
+  const TCircularIcon({
     super.key,
     this.width,
     this.height,
@@ -28,7 +28,8 @@ class TRoundedIcon extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(100),
-        color: dark
+        color: backgroundColor != null ?
+        backgroundColor! : dark
             ? TColors.black.withOpacity(0.9)
             : TColors.white.withOpacity(0.9),
       ),

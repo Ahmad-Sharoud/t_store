@@ -40,10 +40,9 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         /// -- Heading
                         TSectionHeading(
-                          title: 'Popular Categories',
-                          showActionButton: false,
-                          textColor: TColors.white,
-                        ),
+                            title: 'Popular Categories',
+                            showActionButton: false,
+                            textColor: TColors.white),
                         SizedBox(height: TSizes.spaceBtwItems),
 
                         /// -- Categories
@@ -70,6 +69,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
+                  /// -- Heading
+                  TSectionHeading(title: 'Popular Products', onPressed: (){}),
+                  const SizedBox(width: TSizes.spaceBtwItems,),
                   TGridLayout(
                       itemCount: 4,
                       itemBuilder: (_, index) => const TProductCardVertical()),
