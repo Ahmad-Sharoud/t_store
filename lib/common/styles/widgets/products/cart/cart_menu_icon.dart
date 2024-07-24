@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/utils/constants/colors.dart';
 
-class TCounterIcon extends StatelessWidget {
-  const TCounterIcon({
-    super.key, required this.onPressed, required this.iconColor,
+class TCartCounterIcon extends StatelessWidget {
+  const TCartCounterIcon({
+    super.key, required this.onPressed, this.iconColor,
   });
 
   final VoidCallback onPressed;
-  final Color iconColor;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
