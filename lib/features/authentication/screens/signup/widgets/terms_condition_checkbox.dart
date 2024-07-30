@@ -25,7 +25,7 @@ class TTermsAndConditionCheckbox extends StatelessWidget {
           TextSpan(children: [
             TextSpan(
                 text: '${TTexts.iAgreeTo} ',
-                style: Theme.of(context).textTheme.bodySmall),
+                style: Theme.of(context).textTheme.bodyMedium),
             TextSpan(
                 text: '${TTexts.privacyPolicy} ',
                 style: Theme.of(context)
