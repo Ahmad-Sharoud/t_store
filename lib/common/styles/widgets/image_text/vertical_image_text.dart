@@ -11,11 +11,13 @@ class TVerticalImageText extends StatelessWidget {
     this.backgroundColor = TColors.white,
     this.textColor = TColors.white,
     this.onTap,
+    this.overlayColor,
   });
 
   final String title;
   final String image;
   final Color? backgroundColor;
+  final Color? overlayColor;
   final Color textColor;
   final void Function()? onTap;
   @override
@@ -40,7 +42,9 @@ class TVerticalImageText extends StatelessWidget {
                 child: Image(
               image: AssetImage(image),
               fit: BoxFit.cover,
-              color: dark ? TColors.light : TColors.dark,
+              color: overlayColor,
+
+
             )),
           ),
 

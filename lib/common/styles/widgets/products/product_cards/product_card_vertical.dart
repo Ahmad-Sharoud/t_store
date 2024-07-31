@@ -6,6 +6,7 @@ import 'package:t_store/common/styles/widgets/images/t_rounded_image.dart';
 import 'package:t_store/common/styles/widgets/shadows.dart';
 import 'package:t_store/common/styles/widgets/texts/product_price_text.dart';
 import 'package:t_store/common/styles/widgets/texts/product_title_text.dart';
+import 'package:t_store/common/styles/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -18,7 +19,7 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -48,13 +49,11 @@ class TProductCardVertical extends StatelessWidget {
                       backgroundColor: TColors.secondary.withOpacity(0.8),
                       padding: const EdgeInsets.symmetric(
                           horizontal: TSizes.sm, vertical: TSizes.xs),
-                      child: Text(
-                        '25%',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge!
-                            .apply(color: TColors.black),
-                      ),
+                      child: Text('25%',
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelLarge!
+                              .apply(color: TColors.black)),
                     ),
                   ),
 
@@ -62,14 +61,13 @@ class TProductCardVertical extends StatelessWidget {
                   const Positioned(
                     top: 0,
                     right: 0,
-                    child: TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
+                    child:
+                        TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
                   ),
                 ],
               ),
             ),
-            const SizedBox(
-              height: TSizes.spaceBtwItems / 2,
-            ),
+            const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             /// Details
             const Padding(
@@ -77,40 +75,22 @@ class TProductCardVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TProductTitleText(
-                    title: 'Nike Air Shoes',
-                  ),
-                  SizedBox(
-                    height: TSizes.spaceBtwItems / 2,
-                  ),
-
+                  TProductTitleText(title: 'Nike Air Shoes', smallSize: true),
+                  SizedBox(height: TSizes.spaceBtwItems / 2),
+                  TBrandTitleWithVerifiedIcon(title: '',),
                 ],
               ),
             ),
             const Spacer(),
-            Row(
-              children: [
-                Text(
-                  'Nike',
-                  style: Theme.of(context).textTheme.labelMedium,
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
-                ),
-                const SizedBox(width: TSizes.xs),
-                const Icon(
-                  Iconsax.verify5,
-                  color: TColors.primary,
-                  size: TSizes.iconXs,
-                ),
-              ],
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 /// Price
                 const Padding(
                   padding: EdgeInsets.only(left: TSizes.sm),
-                  child:  TProductPriceText(price: '35.70',),
+                  child: TProductPriceText(
+                    price: '35.70',
+                  ),
                 ),
 
                 /// Add to Cart Icon
@@ -119,8 +99,7 @@ class TProductCardVertical extends StatelessWidget {
                     color: TColors.dark,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(TSizes.cardRadiusMd),
-                      bottomRight:
-                      Radius.circular(TSizes.productImageRadius),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
                     ),
                   ),
                   child: const SizedBox(
@@ -141,5 +120,4 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
-
 
