@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/styles/widgets/appbar/appbar.dart';
 import 'package:t_store/common/styles/widgets/appbar/tabbar.dart';
+import 'package:t_store/common/styles/widgets/brands/brand_showcase.dart';
 import 'package:t_store/common/styles/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/common/styles/widgets/custom_shapes/containers/search_container.dart';
 import 'package:t_store/common/styles/widgets/layouts/grid_layout.dart';
 import 'package:t_store/common/styles/widgets/products/cart/cart_menu_icon.dart';
 import 'package:t_store/common/styles/widgets/texts/section_heading.dart';
-import 'package:t_store/features/shop/screens/store/widgets/t_brand_card.dart';
+import 'package:t_store/common/styles/widgets/brands/t_brand_card.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -68,7 +69,10 @@ class StoreScreen extends StatelessWidget {
                           itemCount: 4,
                           mainAxisExtent: 80,
                           itemBuilder: (_, index) {
-                            return const TBrandCard();
+                            // -- In the backend tutorial we will pass Each brand & onPress event also.
+                            return const TBrandCard(
+                              showBorder: false,
+                            );
                           })
                     ],
                   ),
@@ -90,52 +94,7 @@ class StoreScreen extends StatelessWidget {
               Column(
                 children: [
                   /// -- Brands
-                  TRoundedContainer(
-                    shadowBorder: true,
-                    borderColor: TColors.darkGrey,
-                    backgroundColor: Colors.transparent,
-                    margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
-                    padding: const EdgeInsets.all(TSizes.md),
-                    child: Column(
-                      children: [
-                        /// Brand with products count
-                        const TBrandCard(showBorder: false),
-                        /// Brand Top 3 product Images
-                        Row(
-                          children: [
-                            Expanded(
-                              child: TRoundedContainer(
-                                height: 100,
-                                backgroundColor: dark ? TColors.darkerGrey : TColors.light,
-                                margin: const EdgeInsets.only(right: TSizes.sm),
-                                padding: const EdgeInsets.all(TSizes.md),
-                                child: const Image(image: AssetImage(TImages.nikeAirJordanBlackRed), fit: BoxFit.contain),
-                              ),
-                            ),
-                            Expanded(
-                              child: TRoundedContainer(
-                                height: 100,
-                                backgroundColor: dark ? TColors.darkerGrey : TColors.light,
-                                margin: const EdgeInsets.only(right: TSizes.sm),
-                                padding: const EdgeInsets.all(TSizes.md),
-                                child: const Image(image: AssetImage(TImages.nikeAirJordanBlackRed), fit: BoxFit.contain),
-                              ),
-                            ),
-                            Expanded(
-                              child: TRoundedContainer(
-                                height: 100,
-                                backgroundColor: dark ? TColors.darkerGrey : TColors.light,
-                                margin: const EdgeInsets.only(right: TSizes.sm),
-                                padding: const EdgeInsets.all(TSizes.md),
-                                child: const Image(image: AssetImage(TImages.nikeAirJordanBlackRed), fit: BoxFit.contain),
-                              ),
-                            ),
-                          ],
-                        ),
-
-                      ],
-                    ),
-                  )
+                  TBrandShowcase(images: [TImages.nikeAirJordanBlackRed, TImages.nikeAirJordanOrange, TImages.nikeAirJordanMagenta],),
                 ],
               )
             ],
@@ -145,3 +104,4 @@ class StoreScreen extends StatelessWidget {
     );
   }
 }
+
