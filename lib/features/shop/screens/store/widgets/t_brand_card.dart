@@ -10,9 +10,9 @@ import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class TBrandCard extends StatelessWidget {
   const TBrandCard({
-    super.key,
+    super.key, this.showBorder = true,
   });
-
+  final bool showBorder;
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
@@ -20,12 +20,12 @@ class TBrandCard extends StatelessWidget {
       onTap: (){},
       child: TRoundedContainer(
         padding: const EdgeInsets.all(TSizes.sm),
-        shadowBorder: true,
+        shadowBorder: showBorder,
         backgroundColor: Colors.transparent,
         child: Row(
           children: [
             /// Icons
-            Flexible(child: TCircularImage(image: TImages.clothesIcon, overlayColor: dark ? TColors.white: TColors.black)),
+            Flexible(child: TCircularImage(image: TImages.nikeLogo, overlayColor: dark ? TColors.white: TColors.black)),
             const SizedBox(width: TSizes.spaceBtwItems / 2),
             Expanded(
               child: Column(
@@ -33,7 +33,7 @@ class TBrandCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const TBrandTitleWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.large,),
-                  Text('256 products',overflow: TextOverflow.ellipsis,style: Theme.of(context).textTheme.labelMedium),
+                  Text('25 products',overflow: TextOverflow.ellipsis,style: Theme.of(context).textTheme.labelMedium),
                 ],
               ),
             ),

@@ -37,6 +37,8 @@ static const String electronicsIcon = "assets/icons/categories/icons8-smartphone
   static const String banner2 = "assets/images/banners/promo_banner2.png";
   static const String banner3 = "assets/images/banners/promo_banner3.png";
 
+  // Brands
+  static const String nikeLogo = "assets/images/brands/nike_logo.png";
 
   // Products
 static const String adidasFootball = "assets/images/products/adidas-football.png";
@@ -55,7 +57,7 @@ static const String nikeShoes = "assets/images/products/nike-shoes.png";
 static const String samsungS24Ultra = "assets/images/products/samsung-s24-ultra.png";
 static const String shirt = "assets/images/products/shirt.png";
 static const String slippers = "assets/images/products/slippers.png";
-static const String tinnesRacket = "assets/images/products/tinnes-racket.png";
+static const String tennisRacket = "assets/images/products/tennis-racket.png";
 static const String tomiDogFood = "assets/images/products/tomi-dog-food.png";
 static const String trackSuitBlack = "assets/images/products/track-suit-black.png";
 static const String trackSuitBlue = "assets/images/products/track-suit-blue.png";
